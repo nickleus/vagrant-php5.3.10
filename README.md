@@ -1,11 +1,15 @@
 # vagrant-php5.3.10
 
-A Vagrant Box for PHP 5.3.10 on Ubuntu 12.04 LTS
+A Vagrant Box for PHP 5.3.10 on Ubuntu 12.04 LTS (_"hashicorp/precise64"_).
 
 This includes phpMyAdmin as well.
 
-It also sets php error reporting to only show errors.
+It also sets php error reporting to only show errors, instead of everything.
 
-I've also removed installation of Composer n IonCube.
+_install.sh_:
+
+`sudo sed -i "s/error_reporting = .*/error_reporting = E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR/" /etc/php5/apache2/php.ini`
+
+I've also removed installation of Composer n IonCube--keeping it simple.
 
 nickleus
