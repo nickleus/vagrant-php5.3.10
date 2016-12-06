@@ -1,5 +1,7 @@
 # vagrant-php5.3.10
 
+**DISCLAIMER! You assume all risk for using this. I have not taken security into consideration.**
+
 A Vagrant Box for PHP 5.3.10 on Ubuntu 12.04 LTS, based on @a-h-abid's version.
 
 APPS
