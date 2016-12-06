@@ -1,6 +1,15 @@
 # vagrant-php5.3.10
 
-A Vagrant Box for PHP 5.3.10 on Ubuntu 12.04 LTS.
+A Vagrant Box for PHP 5.3.10 on Ubuntu 12.04 LTS, based on @a-h-abid's version.
+
+APPS
+
+* mysql (_Ver 14.14 Distrib 5.5.53, for debian-linux-gnu (x86_64) using readline 6.2_)
+* apache2 (_Apache/2.2.22 (Ubuntu)_)
+* php5.3.10 (_PHP 5.3.10-1ubuntu3.25 with Suhosin-Patch (cli) (built: Oct  3 2016 17:02:21), with Xdebug v2.1.0_)
+* phpmyadmin (_3.4.10.1deb1_)
+
+NOTES
 
 _"precise64"_:
 http://releases.ubuntu.com/12.04/
