@@ -5,22 +5,22 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-    config.vm.box = "precise64"
-
-    config.vm.network :private_network, ip: "192.168.10.53"
-    config.vm.network :forwarded_port, guest: 80, host: 8053
+    config.vm.box = "hashicorp/precise64"
+    config.vm.network :private_network, ip: "192.168.33.13"
 
     config.vm.provision :shell, :path => "install.sh"
+# an additional bootstrap/provisioning script
+#    config.vm.provision :shell, :path => "bootstrap.sh"
 
-    config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777", "fmode=666"]
+# was having ssh troubles, so this helped. eventually, the better solution was to do: vagrant destroy
+#    config.ssh.username = "vagrant"
+#    config.ssh.password = "vagrant"
 
-    # If true, then any SSH connections made will enable agent forwarding.
-    # Default value: false
-    # config.ssh.forward_agent = true
+    config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
 
     # Share an additional folder to the guest VM. The first argument is
     # the path on the host to the actual folder. The second argument is
     # the path on the guest to mount the folder. And the optional third
     # argument is a set of non-required options.
-    config.vm.synced_folder "D:/abid/php/", "/var/www/html"
+#    config.vm.synced_folder "D:/abid/php/", "/var/www/html"
 end
