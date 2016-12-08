@@ -1,6 +1,6 @@
 # vagrant-php5.3.10
 
-**DISCLAIMER! You assume all risk for using this. I have not taken security into consideration.**
+**DISCLAIMER! You assume all risk for using this. I make no claims and give no guarantees about the security of this setup.**
 
 A Vagrant Box for PHP 5.3.10 on Ubuntu 12.04 LTS, based on @a-h-abid's version.
 

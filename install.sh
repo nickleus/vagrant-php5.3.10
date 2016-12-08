@@ -21,10 +21,14 @@ sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-
 echo "--- Installing and configuring Xdebug"
 sudo apt-get install -y php5-xdebug
 
-cat << EOF | sudo tee -a /etc/php5/mods-available/xdebug.ini
-xdebug.scream=1
-xdebug.cli_color=1
-xdebug.show_local_vars=1
+cat << EOF | sudo tee -a /etc/php5/conf.d/xdebug.ini
+xdebug.remote_enable = 1
+xdebug.remote_connect_back = 1
+xdebug.cli_color = 1
+xdebug.show_local_vars = 1
+xdebug.var_display_max_depth = -1
+xdebug.var_display_max_children = -1
+xdebug.var_display_max_data = -1
 EOF
 
 echo "--- Enabling mod-rewrite"
