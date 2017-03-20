@@ -40,7 +40,7 @@ sudo sed -i "s/error_reporting = .*/error_reporting = E_COMPILE_ERROR|E_RECOVERA
 
 echo "--- Configure Apache"
 sudo sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
-sudo sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www/' /etc/apache2/sites-enabled/000-default.conf
+sudo sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www/' /etc/apache2/sites-enabled/000-default
 
 echo "--- Set ServerName to localhost for Apache"
 cat << EOF | sudo tee /etc/apache2/httpd.conf
